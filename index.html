@@ -3,315 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinthanoori Hemanth | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #1b1b1b;
-            color: #e0e0e0;
-            overflow-x: hidden;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #282828;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #444;
-        }
-
-        nav .navbar-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #00adb5;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #e0e0e0;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #00adb5;
-        }
-
-        .hero-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100vh;
-            padding: 0 5%;
-            background: url('https://images.unsplash.com/photo-1530026186672-23dc87e8f7f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') no-repeat center center/cover;
-            color: white;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            color: #00adb5;
-            margin-bottom: 20px;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .btn {
-            padding: 12px 25px;
-            background-color: #00adb5;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #008c8c;
-        }
-
-        section {
-            padding: 50px 5%;
-        }
-
-        h2 {
-            font-size: 2rem;
-            text-align: center;
-            color: #00adb5;
-            margin-bottom: 20px;
-        }
-
-        .projects {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .project-card {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .project-card h3 {
-            margin-bottom: 10px;
-            color: #00adb5;
-        }
-
-        .project-card p {
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-
-        .skill {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #282828;
-            color: #999;
-        }
-
-        .contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #00adb5;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            background-color: #282828;
-            border: none;
-            border-radius: 5px;
-            color: white;
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: #888;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: 2px solid #00adb5;
-        }
-
-        .contact-form button {
-            width: 100%;
-            padding: 12px;
-            background-color: #00adb5;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .contact-form button:hover {
-            background-color: #008c8c;
-        }
-
-        #contact {
-            padding: 50px 5%;
-            text-align: center;
-        }
-
-
-        @media (max-width: 768px) {
-            .hero-section {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-content {
-                margin-bottom: 40px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <title>Chinthanoori_Hemanth</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-    <nav>
-        <div class="navbar-logo">Chinthanoori Hemanth</div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <nav class="navbar">
+        <div class="logo">
+            <a><img src="./my_protfolio_logo.png" alt="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#HOME">HOME</a></li>
+            <li><a href="#PROJECTS">PROJECTS</a></li>
+            <li><a href="#SKILLS">SKILLS</a></li>
+            <li><a href="#ABOUT">ABOUT</a></li>
+            <li><a href="#CONTACT">CONTACT</a></li>
         </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <a href="#"><img src="./list.png" alt="menu icon" title="menu icon" id="menu-icon"></a>
+        </div>        
     </nav>
 
-    <div class="hero-section">
-        <div class="hero-content">
-            <h1>Welcome, I'm Chinthanoori Hemanth</h1>
-            <p>
-                Final-year Electronics and Communication Engineering (ECE) student, passionate developer, and tech enthusiast.
-                Expertise in web development, app development, cybersecurity, IoT, and full-stack projects.
-            </p>
-            <button class="btn">Download CV</button>
-        </div>
-    </div>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Home Tuitions Website</h3>
-                <p>Technologies: HTML, CSS, JavaScript, PHP, MySQL</p>
-                <p>A home tuition website providing coding tutorials with user registration and scheduling functionality.</p>
-            </div>
-            <div class="project-card">
-                <h3>Voice-Controlled Arduino Car</h3>
-                <p>Technologies: Arduino, Bluetooth Module, IoT</p>
-                <p>A Bluetooth-controlled car that moves based on voice commands using IoT technology.</p>
-            </div>
-            <div class="project-card">
-                <h3>Task Tracking Application</h3>
-                <p>Technologies: Node.js, MySQL, HTML, CSS</p>
-                <p>Tracks tasks and working hours with role-based access control and detailed reports.</p>
+    <!--------------    HOME SECTION    ------------->
+    <section id="HOME" class="home">
+        <div class="home-container">
+            <div class="home-text">
+                <p>Hello, I'm</p>
+                <h1>Hemanth Chinthanoori</h1>
+                <p>"I excel at </p>
+                <span><b id="changing-text" class="changing-text">Web Development</b></span>
+                <p>crafting seamless and dynamic digital experiences."</p>
+                <button href="" class="download-cv">Download CV</button>
             </div>
         </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills">
-            <div class="skill">Frontend: HTML, CSS, JavaScript, React.js</div>
-            <div class="skill">Backend: Node.js, Express.js, Python, Firebase</div>
-            <div class="skill">Database: SQLite, MongoDB</div>
-            <div class="skill">Programming: Java, Python, C</div>
+
+
+    <!--    PROJECT SECTION     -->
+    <section id="PROJECTS" class="projects">
+        <div class="project-container">
+            <h1>My Projects</h1>
+            <p>"Innovating, building, and pushing boundaries—one project at a time." 💡</p>
+            <div class="project-grid">
+                <!--PROJECT CARD 1-->
+                <card class="card-container">
+                    <div class="card-image">
+                        <a><img src="https://miro.medium.com/v2/resize:fit:889/0*ZWNdAXsHwJUoywUi.jpg"></a>
+                    </div>
+                    <div class="card-content">
+                        <h1>Network Firewall with IP Blocking</h1>
+                        <h4>Technologies Used : C++, libpcap (for packet capture), Linux (Kali Linux)</h4>
+                        <p>Implemented a real-time packet-filtering firewall designed to block
+                            malicious IP addresses and prevent unauthorized traffic in a network.
+                            The project focuses on network security and real-time packet analysis,
+                            enhancing cybersecurity defense.
+                        </p>
+                        <a href="https://www.github.com/hemanth181/" class="button-link">
+                            <button> Visit <span class="arrow-space">→</span></button>
+                        </a>
+                    </div>
+                </card>
+                <!--PROJECT CARD 2-->
+                <card class="card-container">
+                    <div class="card-image">
+                        <a><img src="https://miro.medium.com/v2/resize:fit:889/0*ZWNdAXsHwJUoywUi.jpg"></a>
+                    </div>
+                    <div class="card-content">
+                        <h1>Network Firewall with IP Blocking</h1>
+                        <h4>Technologies Used : C++, libpcap (for packet capture), Linux (Kali Linux)</h4>
+                        <p>Implemented a real-time packet-filtering firewall designed to block
+                            malicious IP addresses and prevent unauthorized traffic in a network.
+                            The project focuses on network security and real-time packet analysis,
+                            enhancing cybersecurity defense.
+                        </p>
+                        <a href="https://www.github.com/hemanth181/" class="button-link">
+                            <button> Visit <span class="arrow-space">→</span></button>
+                        </a>
+                    </div>
+                </card>
+                <!--PROJECT CARD 3-->
+                <card class="card-container">
+                    <div class="card-image">
+                        <a><img src="https://miro.medium.com/v2/resize:fit:889/0*ZWNdAXsHwJUoywUi.jpg"></a>
+                    </div>
+                    <div class="card-content">
+                        <h1>Network Firewall with IP Blocking</h1>
+                        <h4>Technologies Used : C++, libpcap (for packet capture), Linux (Kali Linux)</h4>
+                        <p>Implemented a real-time packet-filtering firewall designed to block
+                            malicious IP addresses and prevent unauthorized traffic in a network.
+                            The project focuses on network security and real-time packet analysis,
+                            enhancing cybersecurity defense.
+                        </p>
+                        <a href="https://www.github.com/hemanth181/" class="button-link">
+                            <button> Visit <span class="arrow-space">→</span></button>
+                        </a>
+                    </div>
+                </card>
+            </div>
+    </section>
+
+
+    <!--    SKILLS SECTION     -->
+        <section id="SKILLS" class="skills">
+            <div class="skill-container">
+            <h1>My Skills</h1>
+            <p class="skill-content-text">"Building a strong foundation in programming and software development."</p>
+            <div class="skill-grids">
+            <div class="skill-grid">
+                <!-----    CARD 1     ------->
+                <div class="card-skill">
+                    <div class="skill-image">
+                        <a><img src="https://cdn-icons-png.flaticon.com/128/7991/7991055.png"></a>
+                    </div>
+                    <div class="skill-content">
+                        <h3>Web Development</h3>
+                        <p>Skilled in frontend development using React.js, HTML/CSS, and JavaScript; proficient in backend development with Node.js and Express.js; experience with APIs, JWT, and GraphQL for middleware.</p>
+                    </div>
+                </div>
+                <!-----    CARD 2     ------->
+                <div class="card-skill">
+                    <div class="skill-image">
+                        <a><img src="https://cdn-icons-png.flaticon.com/128/2092/2092663.png"></a>
+                    </div>
+                    <div class="skill-content">
+                        <h3>Cybersecurity & Networking</h3>
+                        <p>Proficient in network security, firewall configuration, penetration testing with Kali Linux, Wireshark, and Metasploit to ensure secure systems and networks.</p>
+                    </div>
+                </div>
+                <!-----    CARD 3     ------->
+                <div class="card-skill">
+                    <div class="skill-image">
+                        <a><img src="https://cdn-icons-png.flaticon.com/128/2645/2645725.png"></a>
+                    </div>
+                    <div class="skill-content">
+                        <h3>Mobile App Development</h3>
+                        <p>Experienced in building Android apps with Java, XML, and Firebase; exploring Flutter for cross-platform development across Android and iOS.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!--SKILL GRID 2-->
+            <div class="skill-grid">
+                <!-----    CARD 1     ------->
+                <div class="card-skill">
+                    <div class="skill-image">
+                        <a><img src="https://cdn-icons-png.flaticon.com/128/18111/18111992.png"></a>
+                    </div>
+                    <div class="skill-content">
+                        <h3>IoT and Embedded Systems</h3>
+                        <p>Hands-on experience with IoT platforms like Arduino and Raspberry Pi; proficient in Bluetooth, MQTT, and sensor integration for smart devices.</p>
+                    </div>
+                </div>
+                <!-----    CARD 2     ------->
+                <div class="card-skill">
+                    <div class="skill-image">
+                        <a><img src="https://cdn-icons-png.flaticon.com/128/9662/9662233.png"></a>
+                    </div>
+                    <div class="skill-content">
+                        <h3>Database Management</h3>
+                        <p>Skilled in database design and management using MySQL, MongoDB, PostgreSQL, and Firebase; experienced in data modeling, querying, and optimization</p>
+                    </div>
+                </div>
+                <!-----    CARD 3     ------->
+                <div class="card-skill">
+                    <div class="skill-image">
+                        <a><img src="https://cdn-icons-png.flaticon.com/128/7021/7021228.png"></a>
+                    </div>
+                    <div class="skill-content">
+                        <h3>Programming Languages and Automation</h3>
+                        <p>Proficient in C, C++, Java, Python, and JavaScript; experienced in automation and scripting with Bash, PowerShell, and Python for task optimization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        </section>
+
+    <!-------   ABOUT ME SECTION    -------->
+    <section id="ABOUT" class="about">
+        <div class="about-container">
+            <h1 class="about-container-h1">About Me</h1>
+            <p class="about-container-p">" Learn more about my background, interests, and passions. "</p>
+            
+            <div class="about-content-container">
+                <div class="about-image">
+                    <img src="https://content.app-sources.com/s/46479887804105307/uploads/Meet_Me/Mentor-section-blue-4776992.png?format=webp" alt="Profile Picture" width="100%" , height="100%">
+                </div>
+                <div class="about-text">
+                    <h2>Hemanth Chinthanoori</h2>
+                    <p>Web Development | Cybersecurity | Cloud technologies.</p>
+                    
+                    <p>With a solid foundation in programming, I enjoy building applications from scratch using modern technologies like **JavaScript**, **React**, **Node.js**, and **AWS**. I am always looking to improve my skills and keep up with the latest trends in tech.</p>
+                    <p>My passion for software development and cybersecurity drives me to continuously explore emerging technologies and best practices in secure coding, penetration testing, and cloud architecture. I focus on optimizing performance, scalability, and security by integrating modern DevOps tools, CI/CD pipelines, and containerization to streamline development workflows.</p>
+                    <p>With hands-on experience in network security, ethical hacking, and cloud computing, I am committed to building resilient and efficient systems. My ability to bridge the gap between development and security ensures that every solution I create is both innovative and secure, aligning with industry standards and best practices.</p>
+                    <p>I believe that technology should be scalable, efficient, and secure, and I am always eager to take on new challenges that push the boundaries of innovation. Whether it's developing enterprise-grade applications or fortifying digital ecosystems, I thrive on solving complex problems and continuously enhancing my technical expertise.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="post" class="contact-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <!-------   CONTACT ME SECTION    -------->
+    <section id="CONTACT" class="contact">
+        <div class="contact-container">
+            <h1 class="contact-container-h1">Contact Me</h1>
+            <p class="contact-container-p">"Get in touch with me to discuss your project or collaborate on a new idea."</p>
+
+            <div class="contact-content-container">
+                <div class="contact-text">
+                    <h2>Let's Chat.</h2>
+                    <h2>Tell me about your</h2>
+                    <h2>project or idea.</h2>
+                    <p>Lets create something amazing together.</p>
+                    <div class="contact-icons">
+                        <a href="tel:+91 6300538164">
+                            <img src="https://cdn-icons-png.flaticon.com/128/9194/9194905.png" alt="Call" class="contact-icon">
+                        </a>
+                        <a href="mailto:hemanthchinthanoori181@gmail.com">
+                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968534.png" alt="Email" class="contact-icon">
+                        </a>
+                        <a href="https://www.linkedin.com/in/chinthanoori-hemanth/" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="LinkedIn" class="contact-icon">
+                        </a>
+                        <a href="https://wa.me/6300538164" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/128/15713/15713434.png" alt="WhatsApp" class="contact-icon">
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="contact-form">
+                    <form class="form-register">
+                        <h1>Get in touch with me </h1>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" required></textarea><br><br>
+                        <input type="submit" value="Submit" class="submit-button">
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea id="description" name="description" rows="5" placeholder="Enter your message" required></textarea>
-            </div>
-            <button type="submit" class="btn">Submit</button>
-        </form>
+        </div>
     </section>
-
-
+    <!--------------    FOOTER      ------------>
     <footer class="footer">
-        &copy; 2025 Chinthanoori Hemanth. All Rights Reserved.
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Hemanth Chinthanoori</h2>
+                <p>Web Developer | Cybersecurity Enthusiast | Cloud Technologies</p>
+            </div>
+    
+            <div class="footer-center">
+                <h3>Contact</h3>
+                <p><a href="mailto:hemanthchinthanoori181@gmail.com">📧 hemanthchinthanoori181@gmail.com</a></p>
+                <p><a href="tel:+91 6300538164">📞 +91 6300538164</a></p>
+            </div>
+    
+            <div class="footer-right">
+                <h3>Follow Me</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/chinthanoori-hemanth/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/hemanth181" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/733/733553.png" alt="GitHub"></a>
+                    <a href="https://x.com/hemanth_181" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© 2024 Hemanth Chinthanoori. All Rights Reserved.</p>
+        </div>
     </footer>
-
+    
+    <!--JAVASCRIPT-->
+    <script src="script.js"></script>
 </body>
 </html>
