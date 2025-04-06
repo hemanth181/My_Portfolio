@@ -78,6 +78,13 @@ body {
 
 
 @media screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        border-radius: 0px;
+    }
+    
     .nav-links {
         display: none;
         flex-direction: column;
@@ -145,9 +152,14 @@ body {
 }
 
 .home-text h1 {
-    font-size: 65px;
-    color: aqua;
-    padding: 3%;
+        display: none;
+        font-size: 65px;
+        color: aqua;
+        padding: 3%;
+}
+.home-text img {
+    width: 100%;
+    height: auto;
 }
 .changing-text {
     display: inline-block;
@@ -175,14 +187,14 @@ body {
     background-color: aqua;
     padding: 10px;
     border-radius: 10px;
-    margin: 5%;
+    margin: 2%;
 }
 .home-text button:hover {
     direction: none;
     background-color: rgb(155, 164, 157);
     padding: 10px;
     border-radius: 10px;
-    margin: 5%;
+    margin: 2%;
 }
 @media screen  and (max-width :780px ) {
     .home {
@@ -194,19 +206,26 @@ body {
     }
     
     .home-text h1 {
-        font-size: 55px;
+        display: flex;
+        font-size: 45px;
         color: aqua;
         padding: 3%;
         text-align: left;
     }
+    .home-text img {
+        display: none;
+    }
     .changing-text {
-        font-size: 30px;
+        font-size: 25px;
     }
     .home-text button {
         margin-top: 20%;
     }
     .home-text button:hover {
         margin-top: 20%;
+    }
+    .home-container {
+        margin-top: 15%;
     }
     
 }
@@ -576,7 +595,6 @@ body {
     display: block;
     font-weight: bold;
 }
-
 .form-register input, .form-register textarea {
     font-size: 18px;
     width: 100%;
@@ -624,7 +642,6 @@ body {
         height: auto;
     }
 }
-
 /******************     FOOTER SECTION      ******************/
 .footer {
     background-color: #221d1db8;

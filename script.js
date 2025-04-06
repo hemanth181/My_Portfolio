@@ -4,9 +4,9 @@ function toggleMenu() {
 
     const menuIcon = document.getElementById("menu-icon");
     if (navLinks.classList.contains("active")) {
-        menuIcon.src = "./cross-button.png"; // Show close icon
+        menuIcon.src = "./multimedia/menu_close.png"; // Show close icon
     } else {
-        menuIcon.src = "./list.png"; // Show menu icon
+        menuIcon.src = "./multimedia/menu_icon.png"; // Show menu icon
     }
 }
 
@@ -16,7 +16,7 @@ document.querySelectorAll(".nav-links li a").forEach(link => {
         const navLinks = document.querySelector(".nav-links");
         if (navLinks.classList.contains("active")) {
             navLinks.classList.remove("active");
-            document.getElementById("menu-icon").src = "./list.png"; // Reset icon
+            document.getElementById("menu-icon").src = "./multimedia/menu_icon.png"; // Reset icon
         }
     });
 });
@@ -54,3 +54,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typeEffect();
 });
+
+//FORMS
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxIyvYtvbaL0n04OkG3uALgTbo7YLwV0TS0yPAGXTz0ogFoG_iSWXpWY21vTWgMoDX2tg/exec';
+  const form = document.forms['contact-form'];
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        alert("Thank you! Your form has been submitted successfully.");
+        window.location.reload();
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        alert("Oops! There was a problem submitting your form.");
+      });
+  });

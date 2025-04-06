@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinthanoori_Hemanth</title>
-    <link rel="stylesheet" href="./style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Hemanth Chinthanoori | Full-Stack Developer & Cybersecurity Analyst</title>
+        <meta name="description" content="Hi, I’m Hemanth Chinthanoori, a passionate Full-Stack Developer & Cybersecurity Analyst specializing in React.js, Node.js, Python, MongoDB, and cloud technologies. Explore my portfolio to see my latest projects and expertise in software development and security.">
+        <meta name="keywords" content="Full-Stack Developer, Application Developer, Cybersecurity Analyst, React.js, Next.js, Node.js, Express.js, Python, Django, FastAPI, MongoDB, MySQL, PostgreSQL, Firebase, C, C++, C#, Java, Spring Boot, HTML, CSS, JavaScript, TypeScript, Bootstrap, Tailwind CSS, Responsive Design, API Development, Cloud Computing, AWS, DevOps, Git, GitHub, Docker, CI/CD">
+        <meta name="author" content="Hemanth Chinthanoori">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Open Graph for Social Media -->
+        <meta property="og:title" content="Hemanth Chinthanoori | Full-Stack Developer & Cybersecurity Analyst">
+        <meta property="og:description" content="Explore the portfolio of Hemanth Chinthanoori, a Full-Stack Developer specializing in React.js, Node.js, Python, and Cloud Security.">
+        <meta property="og:image" content="https://hemanth181.github.io/My_Portfolio/preview-image.jpg">
+        <meta property="og:url" content="https://your-portfolio-url.com">
+    
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="./style.css">
+    
+        <!-- Schema Markup -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Hemanth Chinthanoori",
+          "jobTitle": "Full-Stack Developer & Cybersecurity Analyst",
+          "url": "https://hemanth181.github.io/My_Portfolio/",
+          "sameAs": [
+            "https://www.linkedin.com/in/chinthanoori-hemanth/",
+            "https://github.com/hemanth181",
+            "https://x.com/hemanth_181"
+          ]
+        }
+        </script>    
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a><img src="./my_protfolio_logo.png" alt="logo"></a>
+            <a href="#"><img src="./multimedia/my_protfolio_logo.png" alt="logo"></a>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
             <li><a href="#HOME">HOME</a></li>
             <li><a href="#PROJECTS">PROJECTS</a></li>
             <li><a href="#SKILLS">SKILLS</a></li>
@@ -19,9 +50,10 @@
             <li><a href="#CONTACT">CONTACT</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()">
-            <a href="#"><img src="./list.png" alt="menu icon" title="menu icon" id="menu-icon"></a>
+            <img src="./multimedia/menu_icon.png" alt="menu icon" title="menu icon" id="menu-icon">
         </div>        
     </nav>
+    
 
     <!--------------    HOME SECTION    ------------->
     <section id="HOME" class="home">
@@ -29,17 +61,15 @@
             <div class="home-text">
                 <p>Hello, I'm</p>
                 <h1>Hemanth Chinthanoori</h1>
+                <img src="./Hemanth_Chinthanoori.png">
                 <p>"I excel at </p>
                 <span><b id="changing-text" class="changing-text">Web Development</b></span>
                 <p>crafting seamless and dynamic digital experiences."</p>
-                <button href="" class="download-cv">Download CV</button>
+                <a href="HemanthChinthanoori.pdf" class="download-cv" download target="_blank"><button>Download CV</button></a>
             </div>
         </div>
     </section>
-
-
-
-    <!--    PROJECT SECTION     -->
+    <!-----PROJECT SECTION------>
     <section id="PROJECTS" class="projects">
         <div class="project-container">
             <h1>My Projects</h1>
@@ -48,7 +78,7 @@
                 <!--PROJECT CARD 1-->
                 <card class="card-container">
                     <div class="card-image">
-                        <a><img src="https://miro.medium.com/v2/resize:fit:889/0*ZWNdAXsHwJUoywUi.jpg"></a>
+                        <a><img src="./multimedia/Projects/Network_Firewall.png"></a>
                     </div>
                     <div class="card-content">
                         <h1>Network Firewall with IP Blocking</h1>
@@ -66,15 +96,15 @@
                 <!--PROJECT CARD 2-->
                 <card class="card-container">
                     <div class="card-image">
-                        <a><img src="https://miro.medium.com/v2/resize:fit:889/0*ZWNdAXsHwJUoywUi.jpg"></a>
+                        <a><img src="./multimedia/Projects/Face_recognition.png"></a>
                     </div>
                     <div class="card-content">
-                        <h1>Network Firewall with IP Blocking</h1>
-                        <h4>Technologies Used : C++, libpcap (for packet capture), Linux (Kali Linux)</h4>
-                        <p>Implemented a real-time packet-filtering firewall designed to block
-                            malicious IP addresses and prevent unauthorized traffic in a network.
-                            The project focuses on network security and real-time packet analysis,
-                            enhancing cybersecurity defense.
+                        <h1>Face Recognition Attendance System</h1>
+                        <h4>Technologies Used : Python, OpenCV, PyCharm, HTML, MySQL</h4>
+                        <p>Developed a face recognition-based attendance system
+                            using Python and OpenCV. The system stores attendance data in a
+                            MySQL database and displays the records dynamically on an HTML
+                            frontend page.                            
                         </p>
                         <a href="https://www.github.com/hemanth181/" class="button-link">
                             <button> Visit <span class="arrow-space">→</span></button>
@@ -84,19 +114,21 @@
                 <!--PROJECT CARD 3-->
                 <card class="card-container">
                     <div class="card-image">
-                        <a><img src="https://miro.medium.com/v2/resize:fit:889/0*ZWNdAXsHwJUoywUi.jpg"></a>
+                        <a><img src="./multimedia/Projects/arduino_car.jpeg"></a>
                     </div>
                     <div class="card-content">
-                        <h1>Network Firewall with IP Blocking</h1>
-                        <h4>Technologies Used : C++, libpcap (for packet capture), Linux (Kali Linux)</h4>
-                        <p>Implemented a real-time packet-filtering firewall designed to block
-                            malicious IP addresses and prevent unauthorized traffic in a network.
-                            The project focuses on network security and real-time packet analysis,
-                            enhancing cybersecurity defense.
+                        <h1>Bluetooth Arduino Mobile Control Car</h1>
+                        <h4>Technologies Used : Arduino, C++, Bluetooth Module (HC-05/HC-06), Motor Driver (L298N)</h4>
+                        <p>Designed and developed a Bluetooth-controlled car using
+                            Arduino and an Android mobile application. Integrated HC-05
+                            Bluetooth module for wireless communication, allowing real-time
+                            control of car movements. Implemented motor driver (L298N) for
+                            smooth speed and direction control. Developed an intuitive mobile
+                            interface for seamless user interaction.
                         </p>
-                        <a href="https://www.github.com/hemanth181/" class="button-link">
+                        <!--a href="https://www.github.com/hemanth181/" class="button-link">
                             <button> Visit <span class="arrow-space">→</span></button>
-                        </a>
+                        </a-->
                     </div>
                 </card>
             </div>
@@ -230,16 +262,16 @@
                     </div>
                     
                 </div>
-                <div class="contact-form">
-                    <form class="form-register">
+                <div class="contact-form" id="contact-form"> 
+                    <form class="form-register" name="contact-form" method="POST">
                         <h1>Get in touch with me </h1>
                         <label for="name">Name:</label><br>
-                        <input type="text" id="name" name="name" required><br>
+                        <input type="text" id="name" name="Name" required><br>
                         <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" required><br>
+                        <input type="email" id="email" name="Email" required><br>
                         <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" required></textarea><br><br>
-                        <input type="submit" value="Submit" class="submit-button">
+                        <textarea id="message" name="Message" required></textarea><br><br>
+                        <input type="submit" value="Submit" class="submit-button" id="submit">
                     </form>
                 </div>
             </div>
