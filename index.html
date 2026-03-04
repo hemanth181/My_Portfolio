@@ -1,317 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinthanoori Hemanth | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hemanth Chinthanoori | Cyber Security Analyst</title>
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #1b1b1b;
-            color: #e0e0e0;
-            overflow-x: hidden;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #282828;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #444;
-        }
+<style>
+/* GENERAL STYLES */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color:#ffffff;
+    color:#111;
+    overflow-x:hidden;
+}
 
-        nav .navbar-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #00adb5;
-        }
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background-color:white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+nav h2{
+    font-weight:700;
+}
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+nav ul li{
+    position:relative;
+}
+nav ul li:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:-15px;
+    top:10%;
+    height:80%;
+    width:1px;
+    background:#111;
+    opacity:0.3;
+}
+nav ul li a{
+    text-decoration:none;
+    color:#111;
+    font-weight:500;
+    transition:0.3s;
+}
+nav ul li a:hover{
+    opacity:0.6;
+}
 
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
+/* MOBILE MENU BUTTON */
+.menu-toggle{
+    display:none;
+    position:fixed;
+    top:20px;
+    left:55%;
+    transform:translateX(-50%);
+    cursor:pointer;
+    flex-direction:column;
+    gap:5px;
+    z-index:1100;
+}
+.menu-toggle span{
+    width:28px;
+    height:3px;
+    background:#111;
+    border-radius:3px;
+    transition:0.3s;
+}
+.menu-toggle.active span:nth-child(1){
+    transform: rotate(45deg) translate(5px,5px);
+}
+.menu-toggle.active span:nth-child(2){
+    opacity:0;
+}
+.menu-toggle.active span:nth-child(3){
+    transform: rotate(-45deg) translate(6px,-6px);
+}
 
-        nav ul li {
-            margin: 0 15px;
-        }
+/* MOBILE MENU OVERLAY */
+.mobile-menu{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    z-index:999;
+    pointer-events:none;
+    overflow:hidden;
+}
+.mobile-menu.active{
+    transform:translateX(0);
+    pointer-events:auto;
+}
+.mobile-menu a{
+    font-size:28px;
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
+    opacity:0;
+    transform:translateX(-30px);
+    transition:all 0.5s ease;
+}
+.mobile-menu a.show{
+    opacity:1;
+    transform:translateX(0);
+}
+.close-menu{
+    position:absolute;
+    top:20px;
+    right:20px;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #e0e0e0;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
+/* HERO SECTION */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:140px 8% 80px 8%;
+    position:relative;
+}
+.bubble{
+    position:absolute;
+    border-radius:50%;
+    background:linear-gradient(135deg,#e3f2fd,#bbdefb);
+    opacity:0.25;
+    z-index:0;
+}
+.b1{ width:420px;height:420px;top:8%;left:5%; }
+.b2{ width:300px;height:300px;bottom:10%;right:8%; }
 
-        nav ul li a:hover {
-            color: #00adb5;
-        }
+/* 🔥 ONLY THIS PART MODIFIED */
+.profile-img{
+    width:480px;
+    height:480px;
+    border-radius:50%;
+    overflow:hidden;
+    border:8px solid #ffffff;
+    box-shadow:0 25px 60px rgba(0,0,0,0.18);
+    z-index:2;
+    animation:float 5s ease-in-out infinite;
+}
+.profile-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
 
-        .hero-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100vh;
-            padding: 0 5%;
-            background: url('https://images.unsplash.com/photo-1530026186672-23dc87e8f7f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') no-repeat center center/cover;
-            color: white;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-        }
+@keyframes float{
+    0%,100%{transform:translateY(0px);}
+    50%{transform:translateY(-15px);}
+}
 
-        .hero-content h1 {
-            font-size: 3rem;
-            color: #00adb5;
-            margin-bottom: 20px;
-        }
+.hero-text{
+    max-width:600px;
+    z-index:2;
+}
+.hero-text h1{
+    font-size:64px;
+    font-weight:800;
+    line-height:1.05;
+}
+.hero-text h3{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:500;
+    color:#444;
+}
+.hero-text p{
+    margin-top:15px;
+    color:#555;
+}
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 30px;
+    background:#111;
+    color:white;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn:hover{
+    background:#333;
+    transform:translateY(-3px);
+}
 
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
+/* SECTION STYLES */
+section{ padding:100px 8%; }
+.section-title{
+    font-size:40px;
+    margin-bottom:50px;
+    font-weight:700;
+}
 
-        .btn {
-            padding: 12px 25px;
-            background-color: #00adb5;
-            border: none;
-            color: white;
-            font-size: 1rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+/* SKILLS */
+.skill-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+.skill-box{
+    background:#f9f9f9;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+}
+.skill-box:hover{
+    transform:translateY(-5px);
+}
 
-        .btn:hover {
-            background-color: #008c8c;
-        }
+/* PROJECTS */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+.project-grid img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+.arduino-project{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    margin-top:50px;
+}
+.arduino-project img{
+    width:100%;
+    max-width:400px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
 
-        section {
-            padding: 50px 5%;
-        }
+/* CONTACT */
+.contact-container{
+    display:flex;
+    gap:60px;
+    align-items:flex-start;
+}
+.contact-info{ flex:1; }
+.contact-line{
+    width:2px;
+    background:#111;
+    height:280px;
+    opacity:0.2;
+}
+.contact-form{ flex:1; }
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+.contact-form button{
+    padding:14px 30px;
+    background:#111;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
 
-        h2 {
-            font-size: 2rem;
-            text-align: center;
-            color: #00adb5;
-            margin-bottom: 20px;
-        }
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    background:#f5f5f5;
+}
 
-        .projects {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
+/* RESPONSIVE */
+@media(max-width:1100px){
+    .hero{ flex-direction:column; text-align:center; }
+    .profile-img{ margin-bottom:40px; width:260px; height:260px; }
+    .skill-grid,.project-grid{ grid-template-columns:1fr; }
+    .contact-container{ flex-direction:column; }
+    .contact-line{ width:100%; height:2px; }
+}
 
-        .project-card {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
-        }
+@media(max-width:768px){
+    nav ul{ display:none; }
+    .menu-toggle{ display:flex; }
+}
 
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .project-card h3 {
-            margin-bottom: 10px;
-            color: #00adb5;
-        }
-
-        .project-card p {
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-
-        .skill {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #282828;
-            color: #999;
-        }
-
-        .contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #00adb5;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            background-color: #282828;
-            border: none;
-            border-radius: 5px;
-            color: white;
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: #888;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: 2px solid #00adb5;
-        }
-
-        .contact-form button {
-            width: 100%;
-            padding: 12px;
-            background-color: #00adb5;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .contact-form button:hover {
-            background-color: #008c8c;
-        }
-
-        #contact {
-            padding: 50px 5%;
-            text-align: center;
-        }
-
-
-        @media (max-width: 768px) {
-            .hero-section {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-content {
-                margin-bottom: 40px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+@media(max-width:600px){
+    .hero-text h1{ font-size:40px; }
+    section{ padding:80px 6%; }
+}
+</style>
 </head>
 <body>
 
-    <nav>
-        <div class="navbar-logo">Chinthanoori Hemanth</div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="hero-section">
-        <div class="hero-content">
-            <h1>Welcome, I'm Chinthanoori Hemanth</h1>
-            <p>
-                Final-year Electronics and Communication Engineering (ECE) student, passionate developer, and tech enthusiast.
-                Expertise in web development, app development, cybersecurity, IoT, and full-stack projects.
-            </p>
-            <button class="btn">Download CV</button>
-        </div>
+<!-- NAVBAR -->
+<nav>
+    <h2>Hemanth</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
+</nav>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Home Tuitions Website</h3>
-                <p>Technologies: HTML, CSS, JavaScript, PHP, MySQL</p>
-                <p>A home tuition website providing coding tutorials with user registration and scheduling functionality.</p>
-            </div>
-            <div class="project-card">
-                <h3>Voice-Controlled Arduino Car</h3>
-                <p>Technologies: Arduino, Bluetooth Module, IoT</p>
-                <p>A Bluetooth-controlled car that moves based on voice commands using IoT technology.</p>
-            </div>
-            <div class="project-card">
-                <h3>Task Tracking Application</h3>
-                <p>Technologies: Node.js, MySQL, HTML, CSS</p>
-                <p>Tracks tasks and working hours with role-based access control and detailed reports.</p>
-            </div>
-        </div>
-    </section>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+    <div class="close-menu" id="close-menu">&times;</div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</div>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills">
-            <div class="skill">Frontend: HTML, CSS, JavaScript, React.js</div>
-            <div class="skill">Backend: Node.js, Express.js, Python, Firebase</div>
-            <div class="skill">Database: SQLite, MongoDB</div>
-            <div class="skill">Programming: Java, Python, C</div>
-        </div>
-    </section>
+<!-- HERO -->
+<div class="hero">
+    <div class="profile-img">
+        <img src="./multimedia/Chinthanoori_Hemanth_Profile.png" alt="Hemanth">
+    </div>
+    <div class="hero-text">
+        <h1>Hemanth<br>Chinthanoori</h1>
+        <h3>Cyber Security Analyst – Help For Cyber Victims Foundation</h3>
+        <p>Member of Help To Cop (HTC) | Hyderabad, Telangana, India</p>
+        <a href="HemanthChinthanoori.pdf" download class="btn">Download My CV</a>
+    </div>
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+</div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="post" class="contact-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea id="description" name="description" rows="5" placeholder="Enter your message" required></textarea>
-            </div>
-            <button type="submit" class="btn">Submit</button>
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<p>
+I am a Cyber Security Analyst at Help For Cyber Victims Foundation and an active Member of Help To Cop (HTC).
+I assist cybercrime victims and support law enforcement in digital evidence collection, cyber investigation,
+log analysis and incident response operations.
+<br><br>
+With a background in Electronics and Communication Engineering (ECE),
+I combine cybersecurity expertise with embedded systems, IoT security,
+and strong core engineering fundamentals. I am passionate about ethical hacking and securing digital systems.
+</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2 class="section-title">Core Expertise</h2>
+<div class="skill-grid">
+    <div class="skill-box">
+        <h3>Cyber Security & Digital Investigation</h3>
+        <p>Network Security, Firewall Configuration, Vulnerability Assessment, Log Analysis, Incident Handling, Digital Evidence Support</p>
+    </div>
+    <div class="skill-box">
+        <h3>Programming & Secure Development</h3>
+        <p>C, C++, C#, Python, Java, PHP, Node.js | Secure Coding Practices</p>
+    </div>
+    <div class="skill-box">
+        <h3>Embedded Systems & IoT</h3>
+        <p>Arduino, NodeMCU, ESP8266/ESP8288, Raspberry Pi, IoT Security Concepts</p>
+    </div>
+    <div class="skill-box">
+        <h3>Databases & Core ECE</h3>
+        <p>MySQL, MongoDB | VLSI Basics, Digital Electronics, Communication Systems, STL (C++)</p>
+    </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+<div class="project-grid">
+    <div>
+        <img src="./multimedia/Projects/Network_Firewall.png">
+        <h3>Network Firewall with IP Blocking</h3>
+        <p>Developed a packet filtering firewall using C++ and libpcap on Kali Linux for traffic inspection and malicious IP blocking.</p>
+        <a href="#" class="btn">Visit My Project</a>
+    </div>
+    <div>
+        <img src="./multimedia/Projects/Face_recognition.png">
+        <h3>Face Recognition Attendance System</h3>
+        <p>Built using Python & OpenCV with secure database integration for automated identity verification.</p>
+        <a href="#" class="btn">Visit My Project</a>
+    </div>
+</div>
+<div class="arduino-project">
+    <img src="./multimedia/Projects/arduino_car.jpeg">
+    <h3>Bluetooth Arduino Controlled Car</h3>
+    <p>IoT-based wireless controlled robotic car using Arduino and Bluetooth module.</p>
+    <a href="#" class="btn">Visit My Project</a>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2 class="section-title">Contact Me</h2>
+<div class="contact-container">
+    <div class="contact-info">
+        <p><strong>Email:</strong> hemanthchinthanoori181@gmail.com</p>
+        <p><strong>Phone:</strong> +91-6300538164</p>
+        <p><strong>Location:</strong> Hyderabad, Telangana, India</p>
+    </div>
+    <div class="contact-line"></div>
+    <div class="contact-form">
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Contact Number" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="5" placeholder="Reason to Contact" required></textarea>
+            <button type="submit">Reach Me</button>
         </form>
-    </section>
+    </div>
+</div>
+</section>
 
+<!-- FOOTER -->
+<footer>
+© 2026 Hemanth Chinthanoori | Cyber Security Analyst
+</footer>
 
-    <footer class="footer">
-        &copy; 2025 Chinthanoori Hemanth. All Rights Reserved.
-    </footer>
+<script>
+document.addEventListener("mousemove",function(e){
+    let x=e.clientX/50;
+    let y=e.clientY/50;
+    document.querySelector(".b1").style.transform=`translate(${x}px,${y}px)`;
+    document.querySelector(".b2").style.transform=`translate(-${x}px,-${y}px)`;
+});
+
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeMenu = document.getElementById('close-menu');
+const menuLinks = mobileMenu.querySelectorAll('a');
+
+function openMenu(){
+    mobileMenu.classList.add('active');
+    menuToggle.classList.add('active');
+    menuLinks.forEach((link,i)=>{
+        setTimeout(()=>{ link.classList.add('show'); }, i*100);
+    });
+}
+function closeMenuFunc(){
+    mobileMenu.classList.remove('active');
+    menuToggle.classList.remove('active');
+    menuLinks.forEach(link=> link.classList.remove('show'));
+}
+menuToggle.addEventListener('click', openMenu);
+closeMenu.addEventListener('click', closeMenuFunc);
+menuLinks.forEach(link=>{
+    link.addEventListener('click', function(e){
+        closeMenuFunc();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    });
+});
+document.querySelectorAll('nav ul li a').forEach(anchor=>{
+    anchor.addEventListener('click',function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    });
+});
+</script>
 
 </body>
 </html>
